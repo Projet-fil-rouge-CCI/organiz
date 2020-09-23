@@ -10,10 +10,13 @@ if(!empty($_POST)){
 
 include '../models/BDDinscription.php';
 
-inscritpion(trim($_POST['nom']),trim($_POST['prenom']),trim($_POST['reference']),trim($_POST['phone']),trim($_POST['mail']),password_hash(trim($_POST['password']),PASSWORD_BCRYPT));
+
+$idSoc = infoSociete(trim($_POST['nomSociete']),trim($_POST['adresse']),trim($_POST['phoneSociete']));
+
+inscritpion(trim($_POST['nom']),trim($_POST['prenom']),trim($_POST['reference']),trim($_POST['phone']),trim($_POST['mail']),password_hash(trim($_POST['password']),PASSWORD_BCRYPT),$idSoc);
 
 
-infoSociete(trim($_POST['nomSociete']),trim($_POST['adresse']),trim($_POST['phoneSociete']));
+
 
 };
 
