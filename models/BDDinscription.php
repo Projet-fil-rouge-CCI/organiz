@@ -18,7 +18,7 @@ function inscritpion(string $nom,$prenom,$ref,$email,$telephone,$hashedpassword 
 			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
 		]
 	);
-$query='INSERT INTO vendeur(nom,prenom,ref_vendeur,email,telephone,hashedPassword) VALUES (:nom,:prenom,:ref,:email,:tel:hashedPassword)';
+$query='INSERT INTO vendeur(nom,prenom,ref_vendeur,email,telephone,hashedPassword) VALUES (:nom,:prenom,:ref,:email,:tel,:hashedPassword)';
 $sth=$dbh ->prepare($query);
 $sth->bindValue(':nom',$nom,PDO::PARAM_STR);
 $sth->bindValue(':prenom',$prenom,PDO::PARAM_STR);
@@ -52,7 +52,7 @@ $query='INSERT INTO societes(nom,adresse,telephone) VALUES (:nom,:adresse,:tel)'
 $sth=$dbh ->prepare($query);
 $sth->bindValue(':nom',$nom,PDO::PARAM_STR);
 $sth->bindValue(':prenom',$adresse,PDO::PARAM_STR);
-$sth->bindValue(':ref',$telephone,PDO::PARAM_STR);
+$sth->bindValue(':tel',$telephone,PDO::PARAM_STR);
 $sth->execute();
 
 
