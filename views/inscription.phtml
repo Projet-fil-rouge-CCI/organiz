@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Création de compte</title>
-</head>
+    </head>
 <body>
 
-
-
-
-
+<section>
    
-<form action="" method="post">
+<form action="../controllers/inscription.php" method="post">
 
 
 <input type="text" name="nom" required placeholder="Nom">
@@ -25,28 +22,19 @@
 
 <input type="mail" name="mail" required placeholder="e-mail qui servira de login">
 
-<input type="name" name="password" required placeholder="Password">
+<input type="text" name="password" required placeholder="Password">
+
+<input type="text" name="nomSociete" required placeholder="Nom de la société ou de l'entreprise">
+
+<input type="text" name="adresse" required placeholder="Adresse de l'entreprise ou de la sociétè">
+
+<input type="text" name="phoneSociete" required placeholder="télèphone">
 
 <button type="submit"> créer un compte </button>
 
 </form>
-
-
-
-   
-<form action="" method="post">
-
-<input type="text" name="nom" required placeholder="Nom de la société ou de l'entreprise">
-
-<input type="text" name="adresse" required placeholder="Adresse de l'entreprise ou de la sociétè">
-
-<input type="text" name="phone" required placeholder="télèphone">
-
-<button type="submit"> valider les informations </button>
-
-</form>
   
-
+</section>
     
 </body>
 </html>
