@@ -5,7 +5,7 @@ define('DATABASE_DSN', 'mysql:host=localhost;dbname=organiz;charset=utf8');
 define('DATABASE_USERNAME','root');
 define('DATABASE_PASSWORD', '');
 
-function inscritpion(string $nom,$prenom,$ref,$email,$telephone,$hashedpassword,$idSoc ){
+function inscritpion(string $nom,$prenom,$ref,$telephone,$email,$hashedpassword,$idSoc ){
 
 
     $dbh = new PDO
@@ -23,10 +23,9 @@ $sth=$dbh ->prepare($query);
 $sth->bindValue(':nom',$nom,PDO::PARAM_STR);
 $sth->bindValue(':prenom',$prenom,PDO::PARAM_STR);
 $sth->bindValue(':ref',$ref,PDO::PARAM_STR);
-$sth->bindValue(':email',$email,PDO::PARAM_STR);
 $sth->bindValue(':tel',$telephone,PDO::PARAM_STR);
+$sth->bindValue(':email',$email,PDO::PARAM_STR);
 $sth->bindValue(':idSoc',$idSoc,PDO::PARAM_INT);
-
 $sth->bindValue(':hashedPassword',$hashedpassword,PDO::PARAM_STR);
 $sth->execute();
 

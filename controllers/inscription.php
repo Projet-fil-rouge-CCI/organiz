@@ -15,7 +15,8 @@ $idSoc = infoSociete(trim($_POST['nomSociete']),trim($_POST['adresse']),trim($_P
 
 inscritpion(trim($_POST['nom']),trim($_POST['prenom']),trim($_POST['reference']),trim($_POST['phone']),trim($_POST['mail']),password_hash(trim($_POST['password']),PASSWORD_BCRYPT),$idSoc);
 
-
+  header('location:../controllers/connexion.php');
+    exit;
 
 
 };
