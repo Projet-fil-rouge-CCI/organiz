@@ -12,8 +12,8 @@ if($user!==false AND password_verify(trim($_POST['password']),$user['hashedPassw
     $_SESSION['userID']=$user['id_vendeur'];
     var_dump($_SESSION);
 
-    /*header('location:../controllers/pageConnecté.php');
-    exit;*/
+    header('location:../controllers/pageConnectée.php');
+    exit;
 
 
 }  
