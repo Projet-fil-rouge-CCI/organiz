@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  background-color: whitesmoke;
 }
 header {
   display: flex;
@@ -79,6 +80,7 @@ nav div a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   min-height: 100vh;
   width: 100%;
   background-color: #3399cc;
@@ -98,7 +100,6 @@ nav div a:hover {
   justify-content: space-evenly;
   min-height: 220px;
   width: 100%;
-  border: white solid 3px;
 }
 
 .equipe div {
@@ -108,7 +109,6 @@ nav div a:hover {
   justify-content: space-evenly;
   width: 200px;
   min-height: 220px;
-  border: white solid 3px;
 }
 
 .equipe div img {
@@ -116,3 +116,51 @@ nav div a:hover {
   width: 190px;
   border-radius: 50%;
 }
+
+.equipe div p {
+  color: white;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+
+.propos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 220px;
+  width: 100%;
+}
+
+.propos > * {
+  color: white;
+}
+
+.propos h1 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.propos p {
+  text-align: center;
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  width: 75%;
+}
+
+/***********************************************section3*******************************************/
+
+.sect3 {
+  height: 110vh;
+  width: 100%;
+  background-color: #3399cc;
+}
+
+.back {
+  height: 100vh;
+  width: 100%;
+  background-color: whitesmoke;
+  clip-path: circle(195vh at 50% -100vh);
+}
+
+/***********************************************footer*******************************************/
