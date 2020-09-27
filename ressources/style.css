@@ -148,10 +148,10 @@ nav div a:hover {
   width: 75%;
 }
 
-/***********************************************section3*******************************************/
+/***********************************************section3 et footer*******************************************/
 
 .sect3 {
-  height: 110vh;
+  height: 120vh;
   width: 100%;
   background-color: #3399cc;
   display: flex;
@@ -166,17 +166,17 @@ nav div a:hover {
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  width: 200px;
-  font-size: 15px;
+  width: 250px;
+  font-size: 25px;
   font-family: "Open Sans", sans-serif;
   color: white;
 }
 
 .back {
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   background-color: whitesmoke;
   clip-path: circle(195vh at 50% -100vh);
 }
 
-/***********************************************footer*******************************************/
+
