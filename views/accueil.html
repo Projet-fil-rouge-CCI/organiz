@@ -7,7 +7,12 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <script
+    src="https://kit.fontawesome.com/2dc5983f48.js"
+    crossorigin="anonymous"
+  ></script>
     <link href="../ressources/style.css" rel="stylesheet" />
+    <script src="../ressources/javascript.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -17,17 +22,32 @@
       </div>
 
       <nav>
-        <div>
+        <div class="hrefRow">
           <a href="">home</a>
           <a href="">about</a>
           <a href="">contact</a>
         </div>
-        <div>
+        <div class="hrefRow">
           <a href="">connexion</a>
           <a href="">inscription</a>
+         
         </div>
+       
       </nav>
+      <div class="bouton">
+        <i class="fas fa-align-justify"></i>
+      </div>
     </header>
+
+
+    <div id="menu">
+      <div class="href">
+        <a href="">Home</a>
+        <a href="">Qui sommes-nous?</a>
+        <a href="">Nos produits</a>
+        <a href="">Pour continuer le voyage</a>
+      </div>
+    </div>
 
     <section class="sect1">
       <img src="../ressources/images/organizLogo.png" id="logo2" />
@@ -85,7 +105,37 @@
       </article>
     </section>
     <section class="sect3">
-      <div class="back"></div>
+      <div class="back">
+        <div class="contact">
+          <h1>Contact</h1>
+
+          <p>
+            Une question, un renseignement ? Vous pouvez nous contacter
+            directement via ce formulaire
+          </p>
+        </div>
+
+        <form>
+          <div>
+            <input type="texte" name="nom" placeholder="Nom" />
+
+            <input type="texte" name="prenom" placeholder="Prenom" />
+
+            <input type="mail" name="mail" placeholder="E-mail" />
+          </div>
+
+          <div>
+            <input type="texte" name="sujet" placeholder="Sujet" />
+
+            <textarea
+              name="prenom"
+              placeholder="Message"
+              class="textea"
+            ></textarea>
+          </div>
+        </form>
+        <input type="submit" value="Envoyer" class='envoyer'/>
+      </div>
       <div class="faq">
         <p>FAQ</p>
         <p>Privacy Policy</p>
