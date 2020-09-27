@@ -291,8 +291,15 @@ form div > * {
   justify-content: center;
   min-height: 200px;
   width: 100%;
-  background-color: #000002;
+  background-color: #3399cc;
 }
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    font-size: 15px;
+  }
 
 .href {
   display: flex;
@@ -304,7 +311,7 @@ form div > * {
   width: 200px;
   margin-bottom: 20px;
   animation: fade-out 4s;
-  font-family: "Lemonada", cursive;
+  font-family: "Open Sans", sans-serif;
 }
 
 @media all and (min-width: 1000px) {
