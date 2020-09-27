@@ -292,6 +292,7 @@ form div > * {
   min-height: 200px;
   width: 100%;
   background-color: #3399cc;
+  
 }
 
 #menu a {
@@ -312,6 +313,14 @@ form div > * {
   margin-bottom: 20px;
   animation: fade-out 4s;
   font-family: "Open Sans", sans-serif;
+  
+}
+
+@keyframes fade-out{
+
+    from{opacity: 0;}
+    to{opacity: 1;}
+
 }
 
 @media all and (min-width: 1000px) {
