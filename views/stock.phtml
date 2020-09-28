@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="../accueil.php"></a>
+    </header>
+
+
+    <form action="../controllers/stock.php" method="Post" name="formulaire">
+    
+
+    
+    
+
+        <input type="text" name="titre" placeholder="Entrez ici le nom du produit"> 
+
+        <label for="stock">stock</label>
+
+        <input type="checkbox" name="stock" >
+
+
+        <input type="text" name="ref" placeholder="Entrez ici la ref produit"> 
+
+        <input type="text" name="prix" placeholder="Entrez ici le prix unitaire"> 
+        
+      
+        <label for="societe" class="societe"> votre societe</label> 
+        <select  name="societe">
+
+        <?php foreach ($societes as $societe) :?>
+
+        <option value="<?=htmlspecialchars($societes['id_societes'])?>"> <?= htmlspecialchars($societe['nom'])?> </option>
+        
+        <?php endforeach ?>
+
+        </select>
+
+
+    
+</form>
+
+    
+</body>
+</html>
