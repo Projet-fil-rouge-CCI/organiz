@@ -25,14 +25,16 @@ $dbh = new PDO
 );
 
 
-$query='SELECT societes.nom FROM societes INNER JOIN vendeur ON societes.Id_societes=vendeur.Id_societes';
-$sth=$dbh ->query($query);
+$query='SELECT societes.nom FROM societes INNER JOIN vendeur ON societes.Id_societes=vendeur.Id_societes and Id_vendeur=:userId';
+$sth=$dbh ->prepare($query);
+$sth->bindValue(':userId',$_SESSION['userID'],PDO::PARAM_INT);
+$sth->execute();
 $societes= $sth->fetchAll();
 
 var_dump($societes);
 
 
-function ajout($titre,$stock,$ref,$id,$prix){
+function ajout($stock,$titre,$ref,$prix,$id){
 
     $dbh = new PDO
 	(
@@ -45,7 +47,16 @@ function ajout($titre,$stock,$ref,$id,$prix){
 		]
 	);
 
-$query='INSERT INTO stock VALUES ';
+$query='INSERT INTO stock (stock,nom,num_reference,prix_unitaire,Id_societes) values (:stock,:nom,:ref,:prix,:Id_societes)';
+$sth=$dbh ->prepare($query);
+$sth->bindValue(':stock',$stock,PDO::PARAM_BOOL);
+$sth->bindValue(':nom',$titre,PDO::PARAM_STR);
+$sth->bindValue(':ref',$ref,PDO::PARAM_STR);
+$sth->bindValue(':prix',$prix,PDO::PARAM_STR);
+$sth->bindValue(':Id_societes',$id,PDO::PARAM_INT);
+$sth->execute();
+
+
 
 
 }
@@ -62,5 +73,3 @@ $query='INSERT INTO stock VALUES ';
 
 
 
-
-?>

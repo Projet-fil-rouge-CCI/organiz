@@ -11,7 +11,7 @@
     </header>
 
 
-    <form action="../controllers/stock.php" method="Post" name="formulaire">
+    <form action="../controllers/stock.php" method="Post">
     
 
     
@@ -37,6 +37,8 @@
         <option><?= htmlspecialchars($societe['nom'])?> </option>
         
         <?php endforeach ?>
+
+        <input type="submit" value="valider">
 
         </select>
 
