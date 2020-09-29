@@ -32,11 +32,10 @@
         <label for="societe" class="societe"> votre societe</label> 
         <select  name="societe">
 
-        <?php foreach ($societes as $societe) :?>
 
-        <option><?= htmlspecialchars($societe['nom'])?> </option>
+        <option value="<?= htmlspecialchars($_SESSION['idsoc'])?>"><?= htmlspecialchars($_SESSION['socName'])?> </option>
         
-        <?php endforeach ?>
+        
 
         <input type="submit" value="valider">
 

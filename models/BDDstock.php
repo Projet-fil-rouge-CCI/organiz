@@ -13,25 +13,6 @@ define('DATABASE_DSN','mysql:host=localhost;dbname=organiz;charset=utf8');
 define('DATABASE_USERNAME', 'root');
 define('DATABASE_PASSWORD', '');
 
-$dbh = new PDO
-(
-    DATABASE_DSN,
-    DATABASE_USERNAME,
-    DATABASE_PASSWORD,
-    [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-    ]
-);
-
-
-$query='SELECT societes.nom FROM societes INNER JOIN vendeur ON societes.Id_societes=vendeur.Id_societes and Id_vendeur=:userId';
-$sth=$dbh ->prepare($query);
-$sth->bindValue(':userId',$_SESSION['userID'],PDO::PARAM_INT);
-$sth->execute();
-$societes= $sth->fetchAll();
-
-var_dump($societes);
 
 
 function ajout($stock,$titre,$ref,$prix,$id){

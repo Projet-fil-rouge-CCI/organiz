@@ -18,7 +18,7 @@ function connexion($pseudo){
 		]
     );
     
-    $query='SELECT id_vendeur,hashedPassword FROM vendeur WHERE email= :pseudo';
+    $query='SELECT id_vendeur,hashedPassword,societes.id_societes as idsoc,societes.nom as socName FROM vendeur INNER JOIN societes on vendeur.id_societes=societes.id_societes WHERE email= :pseudo';
 $sth=$dbh ->prepare($query);
 $sth->bindValue(':pseudo',$pseudo,PDO::PARAM_STR);
 $sth->execute();
