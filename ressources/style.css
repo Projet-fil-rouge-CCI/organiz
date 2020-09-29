@@ -65,7 +65,7 @@ nav div a:hover {
   background-image: url(../ressources/images/bk.jpg);
   background-size: cover;
   background-position: top;
-  clip-path: circle(180vh at 50% -100vh);
+  clip-path: circle(170vh at 50% -100vh);
 }
 
 #logo2 {

@@ -31,4 +31,36 @@ $societes= $sth->fetchAll();
 
 var_dump($societes);
 
+
+function ajout($titre,$stock,$ref,$id,$prix){
+
+    $dbh = new PDO
+	(
+		DATABASE_DSN,
+		DATABASE_USERNAME,
+		DATABASE_PASSWORD,
+		[
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+		]
+	);
+
+$query='INSERT INTO stock VALUES ';
+
+
+}
+
+
+
+
+
+
+
+?>
+
+
+
+
+
+
 ?>
