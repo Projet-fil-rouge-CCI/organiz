@@ -10,23 +10,36 @@
         <a href="../accueil.php"></a>
     </header>
 
-
     <form action="../controllers/factureDetails.php" method="Post">
+
+
+  <!-- facture -->
+
+
+ <input type="text" name="num" placeholder="Entrez ici le num de facture"> 
+
+ <input type="date" name="datePaiement" placeholder="date de paiement">
+
+ <input type="date" name="dateEmission" placeholder="date d'emission">
+
+ <textarea name="commentaire"></textarea>
+
+
+ <input type="text" name="adresseLivraison" placeholder="adresse livraison">
+ 
+ <input type="text" name="adresseFacturation" placeholder="adresse Facturation">
+
+
+
+
+
+    <!-- facture details -->
+
+
     
-        <input type="text" name="titre" placeholder="Entrez ici le nom du produit"> 
-
-        <label for="objet" > ou selectionnez le dans votre base </label> 
-        <select  name="objet">
-
-
-        <option value="<?= htmlspecialchars($_SESSION['idsoc'])?>"><?= htmlspecialchars($_SESSION['socName'])?> </option>
-        
-        
-
-        
-
-        </select>
-
+    
+      
+       <input type="text" name="titre" placeholder="Entrez ici le nom du produit"> 
 
         <input type="text" name="quantite"  placeholder="quantité">
 
