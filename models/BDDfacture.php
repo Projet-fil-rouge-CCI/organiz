@@ -16,7 +16,7 @@ define('DATABASE_PASSWORD', '');
 
 
 
-function ajoutFacture($num,$datePaiement,$dateEmission,$comm,$adresseLivraison,$adresseFacturation){
+function ajoutFacture($num,$datePaiement,$dateEmission,$comm,$adresseLivraison,$adresseFacturation,$id){
 
 	$dbh = new PDO
 	(
@@ -29,7 +29,7 @@ function ajoutFacture($num,$datePaiement,$dateEmission,$comm,$adresseLivraison,$
 		]
 	);
 
-$query='INSERT INTO facture (numero_facture,date_paiement,date_emission,commentaire,adresse_livraison,adresse_facturation) values (:numero,:date_paiement,:date_emission,:commentaire,:adresse_livraison,:adresse_facturation)';
+$query='INSERT INTO facture (numero_facture,date_paiement,date_emission,commentaire,adresse_livraison,adresse_facturation,Id_societes) values (:numero,:date_paiement,:date_emission,:commentaire,:adresse_livraison,:adresse_facturation,:id)';
 $sth=$dbh ->prepare($query);
 $sth->bindValue(':numero',$num,PDO::PARAM_INT);
 $sth->bindValue(':date_paiement',$datePaiement,PDO::PARAM_STR);
@@ -37,6 +37,7 @@ $sth->bindValue(':date_emission',$dateEmission,PDO::PARAM_STR);
 $sth->bindValue(':commentaire',$comm,PDO::PARAM_STR);
 $sth->bindValue(':adresse_livraison',$adresseLivraison,PDO::PARAM_STR);
 $sth->bindValue(':adresse_facturation',$adresseFacturation,PDO::PARAM_STR);
+$sth->bindValue(':id',$id,PDO::PARAM_INT);
 
 $sth->execute();
 
