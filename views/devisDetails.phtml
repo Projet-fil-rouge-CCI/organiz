@@ -10,7 +10,7 @@
         <a href="../accueil.php"></a>
     </header>
 
-    <form action="../controllers/factureDetails.php" method="Post">
+    <form action="../controllers/devisDetails.php" method="Post">
 
 
    
@@ -39,14 +39,14 @@
 
 
          
-         <label for="facture">Pour quelle facture ?</label> 
+         <label for="devis">Pour quelle devis ?</label> 
 
-         <select name="facture">
+         <select name="devis">
 
-         <?php foreach ($tabFact as $facture):?>
+         <?php foreach ($tabDevis as $devis):?>
 
 
-         <option value="<?= htmlspecialchars($facture['Id_facture'])?>"><?= htmlspecialchars($facture['numero_facture'])?></option>
+         <option value="<?= htmlspecialchars($devis['Id_devis'])?>"><?= htmlspecialchars($devis['numero_devis'])?></option>
 
          <?php endforeach ?>
          
