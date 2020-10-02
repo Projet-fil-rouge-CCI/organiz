@@ -2,6 +2,7 @@
 
 include '../models/BDDfactureDetails.php';
 
+$tabFact=getFacture(($_SESSION['idsoc']));
 
 
 if(!empty($_POST)){

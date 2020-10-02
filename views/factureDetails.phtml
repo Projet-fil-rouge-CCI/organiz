@@ -43,10 +43,10 @@
 
          <select name="facture">
 
-         <?php foreach ($factures as $facture):?>
+         <?php foreach ($tabFact as $facture):?>
 
 
-         <option><?= htmlspecialchars($facture['numero'])?></option>
+         <option><?= htmlspecialchars($facture['numero_facture'])?></option>
 
          <?php endforeach ?>
          
