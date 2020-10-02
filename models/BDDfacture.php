@@ -38,7 +38,6 @@ $sth->bindValue(':commentaire',$comm,PDO::PARAM_STR);
 $sth->bindValue(':adresse_livraison',$adresseLivraison,PDO::PARAM_STR);
 $sth->bindValue(':adresse_facturation',$adresseFacturation,PDO::PARAM_STR);
 $sth->bindValue(':id',$id,PDO::PARAM_INT);
-
 $sth->execute();
 
 }

@@ -26,7 +26,7 @@
 
      
         
-         <label for="societe" class="societe"> Tva</label> 
+         <label for="societe"> Tva</label> 
 
          <select name="tva">
 
@@ -35,6 +35,21 @@
          <option>5,5%</option>
          
 
+         </select>
+
+
+         
+         <label for="facture">Pour quelle facture ?</label> 
+
+         <select name="facture">
+
+         <?php foreach ($factures as $facture):?>
+
+
+         <option><?= htmlspecialchars($facture['numero'])?></option>
+
+         <?php endforeach ?>
+         
          </select>
          <input type="submit" value="valider">
 </form>

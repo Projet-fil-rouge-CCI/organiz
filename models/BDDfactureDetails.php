@@ -14,7 +14,8 @@ define('DATABASE_USERNAME', 'root');
 define('DATABASE_PASSWORD', '');
 
 
-
+$query='SELECT * FROM Facture where facture.id_societes=idsoc';
+$sth->fetchAll();
 
 
 
@@ -37,7 +38,6 @@ $sth->bindValue(':quantite',$quantite,PDO::PARAM_INT);
 $sth->bindValue(':prix',$prix,PDO::PARAM_STR);
 $sth->bindValue(':nom',$titre,PDO::PARAM_STR);
 $sth->bindValue(':TVA',$tva,PDO::PARAM_STR);
-
 $sth->execute();
 
 }
