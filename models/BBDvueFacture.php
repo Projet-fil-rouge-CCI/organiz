@@ -28,15 +28,43 @@ function vueFacture($idFacture){
 
 
 
-$query='SELECT * FROM facture,facture_details where facture.id_societes=:idsoc';
+$query='SELECT * FROM facture where facture.id_facture=:idfact' ;
 $sth=$dbh ->prepare($query);
-$sth->bindValue(':idsoc',$idFacture,PDO::PARAM_STR);
+$sth->bindValue(':idfact',$idFacture,PDO::PARAM_STR);
+$sth->execute();
+
+$vueFacture=$sth->fetch();
+
+return $vueFacture;
+}
+
+
+
+
+
+function vueDetailsFacture($idFacture){
+
+	$dbh = new PDO
+	(
+		DATABASE_DSN,
+		DATABASE_USERNAME,
+		DATABASE_PASSWORD,
+		[
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+		]
+	);
+
+
+
+$query='SELECT * FROM facture_details where facture_details.id_facture=:idfact' ;
+$sth=$dbh ->prepare($query);
+$sth->bindValue(':idfact',$idFacture,PDO::PARAM_STR);
 $sth->execute();
 
 $vueFacture=$sth->fetchAll();
 
 return $vueFacture;
 }
-
 
 ?>
