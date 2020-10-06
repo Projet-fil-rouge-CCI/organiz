@@ -3,44 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../ressources/facture.css">
+    <title>Générer une facture</title>
 </head>
 <body>
     <header>
-        <a href="../accueil.php"></a>
+        <nav>
+            <div>
+                <img src="../ressources/images/logoNavBar.png" class="logo">
+            </div>
+
+            <div class="liens1">
+                <a href="">Home</a>
+            </div>
+
+            <div class="liens2">
+                <a href="">Déconnexion</a>
+            </div>
+        </nav>
     </header>
 
-    <form action="../controllers/facture.php" method="Post">
+    <section class="ellipse">
+        <article>
+            <h1> Générer une facture </h1>
+        </article>
+    </section>
 
 
+        <form action="../controllers/facture.php" method="Post"></form>
+
+
+    <section class="section2">
+        <article class="gauche">
+            <div class="champ">
+                <label for="num">Numéro de facture:</label>
+                    <input type="text" name="num" placeholder="Entrez ici le num de facture">
+            </div>
+
+            <div class="champ"> 
+                <label for="datePaiement">Date de paiement:</label>
+                    <input type="date" name="datePaiement" required placeholder="Date du paiement">
+            </div>
+
+            <div class="champ">
+                <label for="dateEmission">Date d'émission:</label>
+                    <input type="date" name="dateEmission" required placeholder="Date d'émission">
+            </div>
   
+        </article>
+        
+        <article class="droite">
 
 
- <input type="text" name="num" placeholder="Entrez ici le num de facture"> 
+             <div class="champ">
+                <label for="adresseLivraison">Adresse de livraison:</label>
+                    <input type="text" name="adresseLivraison" placeholder="Adresse de livraison">   
+            </div>
+            <div class="champ"> 
+                <label for="adresseFacturation">Adresse de facturation:</label>
+                    <input type="text" name="adresseFacturation" placeholder="Adresse de facturation">
+            </div>
+            <div class="champ">
+                <label for="commentaire">Commentaires:</label>
+                    <textarea name="commentaire"></textarea>
+            </div>
 
- <label for="datePaiement">Date de paiement</label>
+        <button type="submit"> <b>Générer</b> </button>
 
- <input type="date" name="datePaiement" >
+            
+        </article>
+    </section>
 
+        </form>
 
- <label for="dateEmission">Date d'emission</label>
-
- <input type="date" name="dateEmission">
-
- <textarea name="commentaire"></textarea>
-
-
- <input type="text" name="adresseLivraison" placeholder="adresse livraison">
- 
- <input type="text" name="adresseFacturation" placeholder="adresse Facturation">
-
- <input type="submit" value="valider">
-
-
-
-   
-</form>
+        <footer>
+            <a href="">FAQ</a>
+            <a href="">Privacy Policy</a>
+        </footer>
 
     
 </body>
 </html>
+

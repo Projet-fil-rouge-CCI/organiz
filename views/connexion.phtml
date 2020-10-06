@@ -1,31 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+    src="https://kit.fontawesome.com/2dc5983f48.js"
+    crossorigin="anonymous"
+  ></script>
+    <link href="../ressources/connexion.css" rel="stylesheet" />
+    <script src="../ressources/javascript.js" defer></script>
     <title>Document</title>
 </head>
 <body>
+
+  <header>
+        <div>
+          <img src="../ressources/images/logoNavBar.png" id="logo" />
+        </div>
+
+        <nav>
+          <div class="hrefRow">
+            <a href="">Home</a>
+        </div>
+          <div class="hrefRow">
+            <a href="">connexion</a>
+          
+          </div>
+        
+        </nav>
+        <div class="bouton">
+          <i class="fas fa-align-justify"></i>
+        </div>
+  </header>
+
+  <div id="menu">
+      <div class="href">
+        <a href="">Home</a>
+        <a href="">about</a>
+        <a href="">Contact</a>
+        <a href="">Connexion</a>
+        <a href="">Inscription</a>
+      </div>
+  </div>
+
+  <section id="titre">
+    <div class="titres">
+          <h2> Connexion </h2>
+        <div class="text">
+          <div> Vous ne possédez pas de compte ?  
+            <span class="cliquez">
+              <a href="">  Cliquez ici </a>
+            </span>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="annonce">
+
+    <div class="connexion">
+    
+      <form action="../controllers/connexion.php" method="post">
+        <div>
+          <input type="text" name="pseudo" required placeholder="Email"></br>
+          <input type="password" name="password" required placeholder="Password"></br>
+        </div>
+        <input type="submit" value="Se Connecter" class='connecter'/>
+      </form>
+
+    </div>
+
+    <div class="separation"></div>
+
+    <div class="inscription">
+      <h3> Vous n'êtes toujours pas inscrit ? </h3>
+      <p> N'attendez plus pour profiter de notre offre gratuite et rejoindre plus de 1000 utilisateurs ! </p>
+      <input type="submit" value="C'est parti" class='parti'/>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="faq">
+        <p>FAQ</p>
+        <p>Politique de confidentialité</p>
+        <p>Privacy Policy</p>
+    </div>
+  </footer>
+
+    
+</body>
+</html>
 
 
 
 
 
    
-<form action="../controllers/connexion.php" method="post">
+<!-- <form action="../controllers/connexion.php" method="post"> -->
 
 
-<input type="text" name="pseudo" required placeholder="Email">
+<!-- <input type="text" name="pseudo" required placeholder="Email"> -->
 
-<input type="password" name="password" required placeholder="Password">
+<!-- <input type="password" name="password" required placeholder="Password"> -->
 
-<button type="submit"> Se connecter </button>
+<!-- <button type="submit"> Se connecter </button> -->
 
-</form>
+<!-- </form> -->
 
   
 
     
-</body>
-</html>
