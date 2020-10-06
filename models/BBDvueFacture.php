@@ -67,4 +67,30 @@ $vueFacture=$sth->fetchAll();
 return $vueFacture;
 }
 
+
+function nomSociete($nameSoc){
+
+	$dbh = new PDO
+	(
+		DATABASE_DSN,
+		DATABASE_USERNAME,
+		DATABASE_PASSWORD,
+		[
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+		]
+	);
+
+
+
+$query='SELECT nom FROM societes where Id_societes=:nomSoc' ;
+$sth=$dbh ->prepare($query);
+$sth->bindValue(':nomSoc',$nameSoc,PDO::PARAM_STR);
+$sth->execute();
+
+$nameSoc=$sth->fetch();
+
+return $nameSoc;
+}
+
 ?>

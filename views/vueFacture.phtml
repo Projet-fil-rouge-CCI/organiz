@@ -9,7 +9,7 @@
 <body>
 	<div class="container">
 	<header>
-		<div class="societe"></div>
+		<div class="societe"><?=htmlspecialchars($nameSoc['nom'])?></div>
 		
 
 		<div class="devis">Facture n°<?=htmlspecialchars($vueFacture['numero_facture'])?></div>
@@ -43,9 +43,10 @@
 				<?php foreach ($vueDetailsFacture as $details) :?>
 					<tr>
 						<td>Réf.<?= htmlspecialchars($details['ref_produit'])?></td>
-						<td>Quantité<?= htmlspecialchars($details['quantite'])?></td></td>
-						<td>Désignation <?= htmlspecialchars($details['nom'])?></td></td>
-						<td>Prix unitaire HT= <?= htmlspecialchars($details['prix_unitaire'])?>€</td></td>
+						<td>Quantité<?= htmlspecialchars($details['quantite'])?></td>
+						<td>Désignation <?= htmlspecialchars($details['nom'])?></td>
+						<td>Prix unitaire HT= <?= htmlspecialchars($details['prix_unitaire'])?>€</td>
+						<td>tva : <?= htmlspecialchars($details['TVA'])?>%</td>
 						<td>Prix total HT</td>
 					</tr>
 					<?php endforeach ?>
@@ -63,9 +64,9 @@
 					<td class="HT">€</td>
 				</tr>				
 				<tr>
-				<?php foreach ($vueDetailsFacture as $details) :?>
-					<td>TVA à <?= htmlspecialchars($details['TVA'])?></td>
-					<?php endforeach ?>
+				
+					<td>TVA à 20%</td>
+					
 
 					<td class="TVA"></td>
 				</tr>				
