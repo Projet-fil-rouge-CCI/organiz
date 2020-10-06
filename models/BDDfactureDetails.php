@@ -39,7 +39,7 @@ return $tabFact;
 
 
 
-function ajout($titre,$quantite,$prix,$tva,$facture){
+function ajout($titre,$quantite,$prix,$tva,$facture,$ref){
 
 	$dbh = new PDO
 	(
@@ -52,8 +52,9 @@ function ajout($titre,$quantite,$prix,$tva,$facture){
 		]
 	);
 
-$query='INSERT INTO facture_details (quantite,prix_unitaire,nom,TVA,Id_facture) values (:quantite,:prix,:nom,:TVA,:idFacture)';
+$query='INSERT INTO facture_details (ref_produit,quantite,prix_unitaire,nom,TVA,Id_facture) values (:ref,:quantite,:prix,:nom,:TVA,:idFacture)';
 $sth=$dbh ->prepare($query);
+$sth->bindValue(':ref',$ref,PDO::PARAM_STR);
 $sth->bindValue(':quantite',$quantite,PDO::PARAM_INT);
 $sth->bindValue(':prix',$prix,PDO::PARAM_STR);
 $sth->bindValue(':nom',$titre,PDO::PARAM_STR);

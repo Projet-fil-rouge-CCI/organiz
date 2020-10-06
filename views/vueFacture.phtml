@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../ressources/vue.css">
+	<title>Devis</title>
 </head>
 <body>
-    
+	<div class="container">
+	<header>
+		<div class="societe"></div>
+		<div class="devis">DEVIS</div>
+	</header>
+
+
+	<section class="ref">
+		<div class="designation">
+			<div class="reference"></div>
+			<div class="date"></div>
+			<div class="numeroClient"></div>
+		</div>
+
+		<div class="client"></div>
+	</section>
+
+	<section class="int">
+		<div class="intitule"></div>
+		<div class="tableauInt">
+			<table>
+				<thead>
+				<tr>
+					<th colspan="5">Intitulé : Description du projet et/ou Produit facturé</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Réf.</td>
+						<td>Quantité</td>
+						<td>Désignation</td>
+						<td>Prix unitaire HT</td>
+						<td>Prix total HT</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</section>
+
+	<section class="prix">
+		<table>
+				<tr>
+					<td>Total Hors Taxe</td>
+					<td class="HT">1</td>
+				</tr>				
+				<tr>
+					<td>TVA à 20%</td>
+					<td class="TVA">1</td>
+				</tr>				
+				<tr>
+					<td> <strong>Total TTC en euros</strong></td>
+					<td class="TTC"><strong>1</strong></td>
+				</tr>
+
+		</table>
+	</section>
+
+	<section class="Conditions">
+		<div class="texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dignissim dignissim luctus. Fusce molestie nec est consectetur placerat. Nulla leo ante, blandit at enim id, tincidunt tristique ipsum. Aliquam pulvinar eu eros in faucibus. Etiam sit amet est felis. Donec feugiat ex eu dolor commodo, ultrices auctor nibh consequat. Suspendisse potenti. Mauris venenatis sem velit, sit amet volutpat nisl laoreet eget. Etiam sit amet bibendum nunc, sit amet porttitor erat.</div>
+		
+	</section>
+
+	<footer>
+		<div class="siret">Suspendisse potenti. Mauris venenatis sem velit, sit amet volutpat nisl laoreet eget. Etiam sit amet bibendum nunc, sit amet porttitor erat.</div>
+	</footer>
+	</div>
+	
 </body>
 </html>

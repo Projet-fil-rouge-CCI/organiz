@@ -1,0 +1,66 @@
+table,
+td {
+width: 100%;
+border: 1px solid #333;
+}
+
+
+* {
+font-family: 'Open Sans', sans-serif;
+padding: 5px;
+}
+
+header{
+	  width: 100%;
+	justify-content: space-between;
+	display: flex;
+}
+
+
+section{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+
+.int{
+	  width: 100%;
+}
+
+
+.tableauInt {
+  width: 100%;
+}
+
+
+.societe{
+  height: 80px;
+  width: 300px;
+  border: 1px solid #333;
+}
+
+.devis{
+  height: 80px;
+  width: 100px;
+  border: 1px solid #333;
+}
+
+.prix{
+  position: absolute;
+right: 10px;
+    width: 50% ;
+
+}
+
+.Conditions{
+  position: absolute;
+  bottom: 50px;
+}
+
+footer{
+  position: absolute;
+    bottom: 10px;
+
+}
+
