@@ -47,7 +47,8 @@
 						<td>Désignation <?= htmlspecialchars($details['nom'])?></td>
 						<td>Prix unitaire HT= <?= htmlspecialchars($details['prix_unitaire'])?>€</td>
 						<td>tva : <?= htmlspecialchars($details['TVA'])?>%</td>
-						<td>Prix total HT</td>
+						<td>Prix total HT <?= htmlspecialchars($details['prixTotal'])?></td>
+						<td>Prix total TTC <?= htmlspecialchars($details['prixTTC'])?></td>
 					</tr>
 					<?php endforeach ?>
 				</tbody>
@@ -65,13 +66,12 @@
 				</tr>				
 				<tr>
 
-                <?php foreach ($vueDetailsFacture as $details) :?>
-				<?php if(count($vueDetailsFacture['TVA'])>0 && $vueDetailsFacture['TVA']=20.0):?>
 					<td>TVA à 20%</td>
 					
 
-					<td class="TVA"><?= ++$add ?></td>
-					<?php endif ?>
+					<td class="TVA"><?=$add ?></td>
+					
+
 				</tr>				
 				<tr>
 					<td> <strong>Total TTC en euros</strong></td>
@@ -81,15 +81,7 @@
 		</table>
 	</section>
 
-	<section class="Conditions">
-		<div class="texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dignissim dignissim luctus. Fusce molestie nec est consectetur placerat. Nulla leo ante, blandit at enim id, tincidunt tristique ipsum. Aliquam pulvinar eu eros in faucibus. Etiam sit amet est felis. Donec feugiat ex eu dolor commodo, ultrices auctor nibh consequat. Suspendisse potenti. Mauris venenatis sem velit, sit amet volutpat nisl laoreet eget. Etiam sit amet bibendum nunc, sit amet porttitor erat.</div>
-		
-	</section>
-
-	<footer>
-		<div class="siret">Suspendisse potenti. Mauris venenatis sem velit, sit amet volutpat nisl laoreet eget. Etiam sit amet bibendum nunc, sit amet porttitor erat.</div>
-	</footer>
-	</div>
+	
 	
 </body>
 </html>

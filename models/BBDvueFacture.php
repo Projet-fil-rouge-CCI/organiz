@@ -57,7 +57,7 @@ function vueDetailsFacture($idFacture){
 
 
 
-$query='SELECT * FROM facture_details where facture_details.id_facture=:idfact' ;
+$query='SELECT *,(quantite*prix_unitaire) AS prixTotal,((quantite*prix_unitaire)*TVA/100) AS montantTVA,(quantite*prix_unitaire)*(TVA/100+1)AS prixTTC  FROM facture_details where facture_details.id_facture=:idfact' ;
 $sth=$dbh ->prepare($query);
 $sth->bindValue(':idfact',$idFacture,PDO::PARAM_STR);
 $sth->execute();
@@ -92,5 +92,10 @@ $nameSoc=$sth->fetch();
 
 return $nameSoc;
 }
+
+
+
+
+
 
 ?>
