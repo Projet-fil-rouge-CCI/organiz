@@ -64,11 +64,14 @@
 					<td class="HT">€</td>
 				</tr>				
 				<tr>
-				
+
+                <?php foreach ($vueDetailsFacture as $details) :?>
+				<?php if(count($vueDetailsFacture['TVA'])>0 && $vueDetailsFacture['TVA']=20.0):?>
 					<td>TVA à 20%</td>
 					
 
-					<td class="TVA"></td>
+					<td class="TVA"><?= ++$add ?></td>
+					<?php endif ?>
 				</tr>				
 				<tr>
 					<td> <strong>Total TTC en euros</strong></td>

@@ -30,20 +30,17 @@
     </section>
 
 
-        <form action="../controllers/facture.php" method="Post"></form>
+        <form action="../controllers/devis.php" method="Post">
 
 
     <section class="section2">
         <article class="gauche">
             <div class="champ">
                 <label for="num">Numéro de devis:</label>
-                    <input type="text" name="num" placeholder="Entrez ici le num de facture">
+                    <input type="text" name="num" placeholder="Entrez ici le num de devis">
             </div>
 
-            <div class="champ"> 
-                <label for="datePaiement">Date de paiement:</label>
-                    <input type="date" name="datePaiement" required placeholder="Date du paiement">
-            </div>
+           
 
             <div class="champ">
                 <label for="dateEmission">Date d'émission:</label>
@@ -73,11 +70,11 @@
 
         <button type="submit"> <b>Générer</b> </button>
 
-            
+        </form>   
         </article>
     </section>
 
-        </form>
+        
 
         <footer>
             <a href="">FAQ</a>
