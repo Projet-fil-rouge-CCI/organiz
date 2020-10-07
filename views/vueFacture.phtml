@@ -35,9 +35,6 @@
 			<table>
 				<thead>
 				<tr>
-					<th colspan="5">Intitulé : Description du projet et/ou Produit facturé</th>
-				</tr>
-				<tr>
 						<th>Réf.</th>
 						<th>Quantité</th>
 						<th>Désignation </th>
@@ -65,6 +62,8 @@
 					</tr>
 					<?php endforeach ?>
 				</tbody>
+				<caption>Intitulé : Description du projet et/ou Produit facturé</caption>
+				
 			</table>
 
 		</div>
@@ -85,7 +84,17 @@
 					<td class="TVA"><?=sprintf('%10.2f €',$tvaTotal)?></td>
 					
 
-				</tr>				
+				</tr>	
+				
+				<tr>
+
+					<td>TVA à 5,5%</td>
+					
+
+					<td class="TVA"><?=sprintf('%10.2f €',$tvaTotal5)?></td>
+					
+
+				</tr>	
 				<tr>
 					<td> <strong>Total TTC en euros</strong></td>
 					<td class="TTC"><strong><?=sprintf('%10.2f €',$TTC)?></strong></td>
