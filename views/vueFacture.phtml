@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../ressources/vue.css">
 	<title>Devis</title>
 </head>
+
 <body>
-	<div class="container">
+
 	<header>
-		<div class="societe"><?=htmlspecialchars($nameSoc['nom'])?></div>
-		
+		<h1><?= htmlspecialchars($nameSoc['nom']) ?></h1>
 
-		<div class="devis">Facture n°<?=htmlspecialchars($vueFacture['numero_facture'])?></div>
 
-		
-		
+		<h1>Facture n°<?= htmlspecialchars($vueFacture['numero_facture']) ?></h1>
+
 	</header>
 
 
@@ -34,7 +34,7 @@
 		<div class="tableauInt">
 			<table>
 				<thead>
-				<tr>
+					<tr>
 						<th>Réf.</th>
 						<th>Quantité</th>
 						<th>Désignation </th>
@@ -43,27 +43,27 @@
 						<th>Prix total HT </th>
 						<th>Montant TVA </th>
 						<th>Prix total TTC </th>
-						
+
 					</tr>
 				</thead>
 				<tbody>
 
-				<?php foreach ($vueDetailsFacture as $details) :?>
-					<tr>
-						<td><?= htmlspecialchars($details['ref_produit'])?></td>
-						<td><?= htmlspecialchars($details['quantite'])?></td>
-						<td><?= htmlspecialchars($details['nom'])?></td>
-						<td><?= htmlspecialchars($details['prix_unitaire'])?>€</td>
-						<td><?= htmlspecialchars($details['TVA'])?>%</td>
-						<td><?= htmlspecialchars($details['prixTotal'])?>€</td>
-						<td><?= htmlspecialchars(sprintf('%10.2f €',$details['montantTVA']))?></td>
-						<td><?= htmlspecialchars(sprintf('%10.2f €',$details['prixTTC']))?></td>
-						
-					</tr>
+					<?php foreach ($vueDetailsFacture as $details) : ?>
+						<tr>
+							<td><?= htmlspecialchars($details['ref_produit']) ?></td>
+							<td><?= htmlspecialchars($details['quantite']) ?></td>
+							<td><?= htmlspecialchars($details['nom']) ?></td>
+							<td><?= htmlspecialchars($details['prix_unitaire']) ?>€</td>
+							<td><?= htmlspecialchars($details['TVA']) ?>%</td>
+							<td><?= htmlspecialchars($details['prixTotal']) ?>€</td>
+							<td><?= htmlspecialchars(sprintf('%10.2f €', $details['montantTVA'])) ?></td>
+							<td><?= htmlspecialchars(sprintf('%10.2f €', $details['prixTTC'])) ?></td>
+
+						</tr>
 					<?php endforeach ?>
 				</tbody>
 				<caption>Intitulé : Description du projet et/ou Produit facturé</caption>
-				
+
 			</table>
 
 		</div>
@@ -71,39 +71,40 @@
 
 	<section class="prix">
 		<table>
-		
-				<tr>
-					<td>Total Hors Taxe</td>
-					<td class="HT"><?=sprintf('%10.2f €',$THT)?></td>
-				</tr>				
-				<tr>
 
-					<td>TVA à 20%</td>
-					
+			<tr>
+				<td>Total Hors Taxe</td>
+				<td class="HT"><?= sprintf('%10.2f €', $THT) ?></td>
+			</tr>
+			<tr>
 
-					<td class="TVA"><?=sprintf('%10.2f €',$tvaTotal)?></td>
-					
+				<td>TVA à 20%</td>
 
-				</tr>	
-				
-				<tr>
 
-					<td>TVA à 5,5%</td>
-					
+				<td class="TVA"><?= sprintf('%10.2f €', $tvaTotal) ?></td>
 
-					<td class="TVA"><?=sprintf('%10.2f €',$tvaTotal5)?></td>
-					
 
-				</tr>	
-				<tr>
-					<td> <strong>Total TTC en euros</strong></td>
-					<td class="TTC"><strong><?=sprintf('%10.2f €',$TTC)?></strong></td>
-				</tr>
-				
+			</tr>
+
+			<tr>
+
+				<td>TVA à 5,5%</td>
+
+
+				<td class="TVA"><?= sprintf('%10.2f €', $tvaTotal5) ?></td>
+
+
+			</tr>
+			<tr>
+				<td> <strong>Total TTC en euros</strong></td>
+				<td class="TTC"><strong><?= sprintf('%10.2f €', $TTC) ?></strong></td>
+			</tr>
+
 		</table>
 	</section>
 
-	
-	
+
+
 </body>
+
 </html>

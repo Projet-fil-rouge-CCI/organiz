@@ -40,10 +40,10 @@ $TTC=0;
 
 
 /*var_dump($vueFacture);
-
+var_dump($vueDetailsFacture);
 var_dump($nameSoc);*/
 
-var_dump($vueDetailsFacture);
+
 
 
 include ('../views/vueFacture.phtml');

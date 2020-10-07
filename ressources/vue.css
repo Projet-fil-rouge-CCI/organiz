@@ -1,21 +1,50 @@
-table,
-td {
-width: 100%;
-border: 1px solid #333;
-}
-
 
 * {
-font-family: 'Open Sans', sans-serif;
-padding: 5px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  }
+
+
+
+table{
+width: 100%;
+border:1px solid grey;
 }
+
+
+td {
+  border-left: solid 1px grey;
+  
+}
+
 
 header{
-	  width: 100%;
-	justify-content: space-between;
-	display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 100px;
+	
 }
 
+header h1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 50px;
+}
+
+.tableauInt table thead tr th{
+  background-color: rgb(41, 153, 153);
+  color: azure;
+}
+
+
+
+
+/***********************************************correction au dessus*******************************************/
 
 section{
 	width: 100%;
@@ -25,20 +54,13 @@ section{
 }
 
 .int{
-	  width: 100%;
+	  width: 90%;
 }
-
 
 .tableauInt {
   width: 100%;
 }
 
-
-.societe{
-  height: 80px;
-  width: 300px;
-  border: 1px solid #333;
-}
 
 .devis{
   height: 80px;
@@ -53,14 +75,7 @@ right: 10px;
 
 }
 
-.Conditions{
-  position: absolute;
-  bottom: 50px;
-}
 
-footer{
-  position: absolute;
-    bottom: 10px;
 
-}
 
+ 
