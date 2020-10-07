@@ -37,18 +37,31 @@
 				<tr>
 					<th colspan="5">Intitulé : Description du projet et/ou Produit facturé</th>
 				</tr>
+				<tr>
+						<th>Réf.</th>
+						<th>Quantité</th>
+						<th>Désignation </th>
+						<th>Prix unitaire HT</th>
+						<th>tva : </th>
+						<th>Prix total HT </th>
+						<th>Montant TVA </th>
+						<th>Prix total TTC </th>
+						
+					</tr>
 				</thead>
 				<tbody>
 
 				<?php foreach ($vueDetailsFacture as $details) :?>
 					<tr>
-						<td>Réf.<?= htmlspecialchars($details['ref_produit'])?></td>
-						<td>Quantité<?= htmlspecialchars($details['quantite'])?></td>
-						<td>Désignation <?= htmlspecialchars($details['nom'])?></td>
-						<td>Prix unitaire HT= <?= htmlspecialchars($details['prix_unitaire'])?>€</td>
-						<td>tva : <?= htmlspecialchars($details['TVA'])?>%</td>
-						<td>Prix total HT <?= htmlspecialchars($details['prixTotal'])?></td>
-						<td>Prix total TTC <?= htmlspecialchars($details['prixTTC'])?></td>
+						<td><?= htmlspecialchars($details['ref_produit'])?></td>
+						<td><?= htmlspecialchars($details['quantite'])?></td>
+						<td><?= htmlspecialchars($details['nom'])?></td>
+						<td><?= htmlspecialchars($details['prix_unitaire'])?>€</td>
+						<td><?= htmlspecialchars($details['TVA'])?>%</td>
+						<td><?= htmlspecialchars($details['prixTotal'])?>€</td>
+						<td><?= htmlspecialchars(sprintf('%10.2f €',$details['montantTVA']))?></td>
+						<td><?= htmlspecialchars(sprintf('%10.2f €',$details['prixTTC']))?></td>
+						
 					</tr>
 					<?php endforeach ?>
 				</tbody>
@@ -62,20 +75,20 @@
 		
 				<tr>
 					<td>Total Hors Taxe</td>
-					<td class="HT">€</td>
+					<td class="HT"><?=sprintf('%10.2f €',$THT)?></td>
 				</tr>				
 				<tr>
 
 					<td>TVA à 20%</td>
 					
 
-					<td class="TVA"><?=$add ?></td>
+					<td class="TVA"><?=sprintf('%10.2f €',$tvaTotal)?></td>
 					
 
 				</tr>				
 				<tr>
 					<td> <strong>Total TTC en euros</strong></td>
-					<td class="TTC"><strong>€</strong></td>
+					<td class="TTC"><strong><?=sprintf('%10.2f €',$TTC)?></strong></td>
 				</tr>
 				
 		</table>

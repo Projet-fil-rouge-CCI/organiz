@@ -7,16 +7,21 @@ $vueDetailsFacture=vueDetailsFacture(($_GET['id_facture']));
 $nameSoc=nomSociete(($_SESSION['idsoc']));
 
 
+$tvaTotal=0;
+$THT=0;
+$TTC=0;
 
-$add=0;
+
 
  foreach ($vueDetailsFacture as $details){ 
 
-if($details['TVA']>0 && $details['TVA']=20.0){
 
-    ++$add;
 
-}
+    $tvaTotal=$tvaTotal+$details['montantTVA'];
+    $THT=$THT+$details['prixTotal'];
+    $TTC=$TTC+$details['prixTTC'];
+
+
 
 
  }
