@@ -4,7 +4,7 @@ if(!empty($_POST)){
 
 include '../models/BDDconnexion.php';
 
-$user=connexion(trim($_POST['pseudo']));
+$user=connexion(($_POST['pseudo']));
 
 if($user!==false AND password_verify($_POST['password'].'toto',$user['hashedPassword'])){
 

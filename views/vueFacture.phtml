@@ -18,21 +18,39 @@
 
 	</header>
 
+	
 
-	<section class="ref">
-		<div class="designation">
-			<div class="reference"></div>
-			<div class="date"></div>
-			<div class="numeroClient"></div>
-		</div>
 
-		<div class="client"></div>
-	</section>
+	<section class="tableau">
 
-	<section class="int">
-		<div class="intitule"></div>
+	<div class="adresse">
+		<p>Adresse Société:</p>
+		<p>Code-Postal:</p>
+		<p>téléphone Société:</p>
+
+	</div>
+<div class="coordonnées">
+	<div>
+		<p>ref client:</p>
+		<p>Date:</p>
+		<p>téléphone:</p>
+
+	</div>
+
+	<div>
+
+	<h1>Société et ou nom du client</h1>
+		<p>Adresse et code postale:</p>
+		<p>téléphone:</p>
+
+	</div>
+
+</div>
+
 		<div class="tableauInt">
 			<table>
+			<caption>Intitulé : Description du projet et/ou Produit facturé</caption>
+				
 				<thead>
 					<tr>
 						<th>Réf.</th>
@@ -46,59 +64,63 @@
 
 					</tr>
 				</thead>
-				<tbody>
+				
 
+				<tbody>
 					<?php foreach ($vueDetailsFacture as $details) : ?>
 						<tr>
-							<td><?= htmlspecialchars($details['ref_produit']) ?></td>
-							<td><?= htmlspecialchars($details['quantite']) ?></td>
-							<td><?= htmlspecialchars($details['nom']) ?></td>
-							<td><?= htmlspecialchars($details['prix_unitaire']) ?>€</td>
-							<td><?= htmlspecialchars($details['TVA']) ?>%</td>
-							<td><?= htmlspecialchars($details['prixTotal']) ?>€</td>
-							<td><?= htmlspecialchars(sprintf('%10.2f €', $details['montantTVA'])) ?></td>
-							<td><?= htmlspecialchars(sprintf('%10.2f €', $details['prixTTC'])) ?></td>
+							<td><?= ($details['ref_produit']) ?></td>
+							<td><?= ($details['quantite']) ?></td>
+							<td><?= ($details['nom']) ?></td>
+							<td><?= ($details['prix_unitaire']) ?>€</td>
+							<td><?= ($details['TVA']) ?>%</td>
+							<td><?= ($details['prixTotal']) ?>€</td>
+							<td><?= (sprintf('%10.2f €', $details['montantTVA'])) ?></td>
+							<td><?= (sprintf('%10.2f €', $details['prixTTC'])) ?></td>
 
 						</tr>
 					<?php endforeach ?>
 				</tbody>
-				<caption>Intitulé : Description du projet et/ou Produit facturé</caption>
+
+			
 
 			</table>
 
 		</div>
-	</section>
-
-	<section class="prix">
-		<table>
-
-			<tr>
-				<td>Total Hors Taxe</td>
-				<td class="HT"><?= sprintf('%10.2f €', $THT) ?></td>
-			</tr>
-			<tr>
-
-				<td>TVA à 20%</td>
 
 
-				<td class="TVA"><?= sprintf('%10.2f €', $tvaTotal) ?></td>
+		<div class="tabPrix">
+			<table>
+
+				<tr>
+					<td>Total Hors Taxe</td>
+					<td class="HT"><?= sprintf('%10.2f €', $THT) ?></td>
+				</tr>
+				<tr>
+
+					<td>TVA à 20%</td>
 
 
-			</tr>
+					<td class="TVA"><?= sprintf('%10.2f €', $tvaTotal) ?></td>
 
-			<tr>
 
-				<td>TVA à 5,5%</td>
+				</tr>
 
-				<td class="TVA"><?= sprintf('%10.2f €', $tvaTotal5) ?></td>
+				<tr>
 
-			</tr>
-			<tr>
-				<td> <strong>Total TTC en euros</strong></td>
-				<td class="TTC"><strong><?= sprintf('%10.2f €', $TTC) ?></strong></td>
-			</tr>
+					<td>TVA à 5,5%</td>
 
-		</table>
+					<td class="TVA"><?= sprintf('%10.2f €', $tvaTotal5) ?></td>
+
+				</tr>
+				<tr>
+					<td> <strong>Total TTC en euros</strong></td>
+					<td class="TTC"><strong><?= sprintf('%10.2f €', $TTC) ?></strong></td>
+				</tr>
+
+			</table>
+
+		</div>
 	</section>
 
 
