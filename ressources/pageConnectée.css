@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body {
+position: relative;
+font-family: 'Open Sans', sans-serif;
+margin: 80px;
+background-color:#3399CC;
+align-items: center;
+text-align: center;
+vertical-align:middle;
+}
+
+.container {
+padding-top: 20px;
+background:#fff;
+margin:0 auto;
+border-radius: 12px;
+height: 550px;
+width: 420px;
+font-family: 'Open Sans', sans-serif;
+text-align: center;
+vertical-align:middle;
+box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.fa-home{
+color:#fff;
+}
+
+.button{
+font-family: 'Open Sans', sans-serif;
+font-weight: 700;
+background: #3399CC;
+width: 220px;
+border-radius: 30px;
+border: none;
+color: #fff;
+font-size: 16px;
+padding: 15px 30px;
+margin: 8px;
+text-decoration: none;
+}
+
+.button:hover{
+cursor: pointer;
+background: #666666;
+border-radius: 30px;
+border: none;
+color: #fff;
+font-size: 16px;
+padding: 15px 30px;
+margin: 8px;
+
+}
+
+.button2{
+font-family: 'Open Sans', sans-serif;
+font-weight: 400;
+
+background: #666666;
+width: 220px;
+border-radius: 30px;
+border: none;
+color: #fff;
+font-size: 16px;
+padding: 15px 30px;
+margin: 8px;
+text-decoration: none;
+}
+
+.button2:hover{
+background: #3399CC;
+border-radius: 30px;
+border: none;
+color: #fff;
+font-size: 16px;
+padding: 15px 30px;
+margin: 8px;
+text-decoration: none;
+}
+
+
+p {
+color:#666666;
+font-family: 'Open Sans', sans-serif;;
+font-size: 25px;
+font-weight: bold;
+}
+
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+
+@media (max-width: 767px) {
+.container{
+padding-top: none;
+background:none;
+height: 100%;
+width: 100%;
+font-family: 'Open Sans', sans-serif;
+text-align: center;
+vertical-align:middle;
+box-shadow: none;
+    }    
+
+
+    @media (max-width: 767px) {
+    body{
+background-color:#fff;
+margin:10px;
+
+}
+}
+}
